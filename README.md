@@ -101,14 +101,14 @@ The output displays:
 
 ### Input
 
-<div align="center">
-<img src="data/input_video.gif" >
-</div>
+🎥 **[Watch the input video](data/road.mp4)**
+
+<img src="data/input.gif">
 
 ### Output
-<div align="center">
-<img src="output/output_video.gif" >
-</div>
+🎥 **[Watch the output video](output/output.mp4)**
+
+<img src="output/output.gif">
 
 ---
 

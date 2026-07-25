@@ -9,6 +9,9 @@ cap = cv2.VideoCapture("./data/road.mp4")
 if not cap.isOpened():
     print("Video failed to load!")
 
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
 while True:
     ret, image = cap.read()
     img = image.copy()
@@ -31,7 +34,7 @@ while True:
     cv2.putText(roi_result, "ROI algorithm",(50,50),cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255),1)
 
     combined = stackImages([roi_result, hough_result], 2, 0.5)
-    image = cv2.resize(combined,(1200, 600))
+    image = cv2.resize(combined,(width, height))
 
     cv2.imshow("Only ROI VS With HOUGH", image)
     if cv2.waitKey(30) & 0xFF == ord("q"):
